@@ -30,6 +30,10 @@
   background: #dfdede;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 button {
   overflow-x: hidden;
@@ -115,9 +119,16 @@ button {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  background: rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(20px);
+  background: transparent;
+  backdrop-filter: blur(30px);
   z-index: 2;
+  transition-property: transform, background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.header.dark {
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .header .logo {
@@ -133,7 +144,7 @@ button {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .header .nav {
@@ -150,8 +161,13 @@ button {
   display: none;
 }
 
+.header .menu.open {
+  display: block;
+}
+
 .header .menu-li {
   width: 100%;
+  text-align: center;
 }
 
 .header .link {
@@ -159,6 +175,7 @@ button {
   padding: 0.5rem;
   line-height: 1;
   color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
 }
 
 .header .link.on {
@@ -246,8 +263,6 @@ button {
   animation: pitapat5 800ms ease-in reverse infinite;
 }
 
-
-
 /* Articles */
 .articles .article-wrapper {
   display: grid;
@@ -299,8 +314,6 @@ button {
   color: var(--color-white);
 }
 
-
-
 /* Goods */
 .goods .categories {
   display: flex;
@@ -309,8 +322,8 @@ button {
 }
 
 .goods .categories .cta {
-  color: rgba(0,0,0,0.5);
-  border-bottom: 1px solid rgba(0,0,0,0.5);
+  color: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .goods .categories .cta.on {
@@ -343,8 +356,6 @@ button {
 .goods .article .copy-wrapper .copy {
   font-size: 0.8rem;
 }
-
-
 
 /* About */
 .about .headline {
@@ -649,7 +660,7 @@ button {
   .goods .article .copy {
     font-size: 1.1rem;
   }
-  
+
   .goods .article .copy-wrapper .copy {
     font-size: 1rem;
   }
