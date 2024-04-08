@@ -14,278 +14,513 @@
   <meta property="og:description" content="음악 큐레이션 뉴스레터 서비스. 음악을 깊게 음미하고 싶다면 꼭 곁들여 보세요." />
   <meta property="og:url" content="" />
   <meta property="og:image" content="" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/animation.css">
   <link rel="stylesheet" href="./css/style.css">
   <!-- JS -->
   <script defer type="module" src="./src/main.js"></script>
+  <script defer type="module" src="./src/active-menu.js"></script>
+  <script defer type="module" src="./src/swiper.js"></script>
 </head>
 <body>
-  <header>
-    <h1>
-      <a href="">
-        Deeping Sauce
+  <header class="header">
+    <h1 class="logo">
+      <a class="logo-link" href="/">
+        <img src="./images/logo.png" alt="Deeping Sauce Logo">
       </a>
     </h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#articles">Articles</a></li>
-        <li><a href="#comment">Comment Snack</a></li>
-        <li><a href="#goods">Goods</a></li>
-        <li><a href="#contact">Contact</a></li>
+    <button class="toggle-menu" aria-label="menu toggle">+</button>
+    <nav class="nav">
+      <ul class="menu">
+        <li class="menu-li"><a class="link on" href="#home">Home,</a></li>
+        <li class="menu-li"><a class="link" href="#articles">Articles,</a></li>
+        <li class="menu-li"><a class="link" href="#goods">Goods,</a></li>
+        <li class="menu-li"><a class="link" href="#about">About,</a></li>
+        <li class="menu-li"><a class="link" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <!-- Home -->
-    <section id="home">
-      <img src="./images/deeping-sauce.png" alt="">
-
+    <section id="home" class="home section">
+      <div class="image-wrapper">
+        <img class="image" src="./images/logo-lettering2.png" alt="Deeping Sauce">
+      </div>
+        <div class="copy-wrapper">
+          <h2 class="headline">
+            매주 목요일 저녁, <br>
+            인디음악을 추천하고 큐레이션 해주는 <br>
+            '무료 이메일 구독 서비스'
+          </h2>
+          <p class="copy small">
+            같은 음악이라도 무엇을 보고, 읽으며, 감상하느냐에 따라 느낄 수 있는 깊이가 달라진다는 생각을 바탕으로,
+            인디 음악을 좋아하고 찾고 싶어하는 리스너에게,
+            일명 '나만 알고 싶은 인디 음악'을 <a class="cta small" href="#about">다양한 소스</a>와 함께 큐레이션해 보내주는 뉴스레터 입니다.
+          </p>
+          <a href="https://page.stibee.com/subscriptions/64008" target="_blank" class="cta small">구독하기</a>
+        </div>
     </section>
 
-    <!-- About -->
-    <section id="about">
-      <h2>What is Deeping Sauce?</h2>
-      <p>🥫Dipping sauce(찍어 먹는 소스)도 아니고 Deeping sauce(깊은 소스)가 뭐야..?</p>
-      <p>
-        똑같은 음식이라도 다른 소스를 찍어 먹으면 전혀 다른 맛이 나곤 하잖아요.
-        소스의 그런 특징에서 영감을 얻었습니다.
-        찍어먹는 소스라는 뜻의 'Dipping Sauce' 라는 단어에 ‘깊다(deep)’라는 의미를 더한 DEEPING SAUCE로서
-        음악 역시 무엇을 보고, 읽으며 듣느냐에 따라 깊이가 달라진다는 의미를 담았어요.
-        지금부터 여러분들이 음악과 함께 곁들이기에 가장 좋은 소스가 되겠습니다.😊
-      </p>
-      <a href="https://page.stibee.com/subscriptions/64008" target="_blank">구독하기</a>
+    <section class="poster" aria-label="LP 행성 외계인에게 납치당하는 캐릭터 쏘쓰">
+      <span class="star"></span>
+      <span class="star"></span>
+      <span class="star"></span>
+      <span class="star"></span>
+      <span class="star"></span>
     </section>
 
     <!-- Articles -->
-    <section id="articles">
-      <h2>News Letter 다시 보기</h2>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>스무 번째</p>
-          <p>저희에요! 저희 디핑소스에요!</p>
-          <p>2021.01.17</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>열여덟 번째</p>
-          <p>디핑소스 셰프 올림</p>
-          <p>2020.11.12</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>열일곱 번째</p>
-          <p>세탁 맡긴 옷 찾아가세요</p>
-          <p>2020.11.5</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>열여섯 번째</p>
-          <p>선글라스 벗으세요.</p>
-          <p>2020.10.29</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>열다섯 번째</p>
-          <p>부끄러워요😚</p>
-          <p>2020.10.22</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>열네 번째</p>
-          <p>자요? 자나보네...</p>
-          <p>2020.10.15</p>
-        </a>
-      </article>
-      <button>더 보기</button>
-      <!-- <article>
-        <a href="">
-          <img src="" alt="">
-          <p>열세 번째</p>
-          <p>너무 혼란스러워요!</p>
-          <p>2020.10.8</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>열두 번째</p>
-          <p>그럴 때도 있는거죠...</p>
-          <p>2020.09.24</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>열한 번째</p>
-          <p>캔, 눈, 사랑이 모이면?</p>
-          <p>2020.09.17</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>열 번째</p>
-          <p>나..무시하는 거예요..?</p>
-          <p>2020.09.10</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>아홉 번째</p>
-          <p>이 시국에 비행이라뇨?</p>
-          <p>2020.09.03</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>여덟 번째</p>
-          <p>설에 뭐하시나요?</p>
-          <p>2020.08.27</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>일곱 번째</p>
-          <p>저의 구애를 받아주시겠습니까?</p>
-          <p>2020.08.20</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>여섯 번째</p>
-          <p>맞는 말만 하는 꼴통이신가요?</p>
-          <p>2020.08.13</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>다섯 번째</p>
-          <p>우리는 어쨰서 어른이 된 걸까?</p>
-          <p>2020.06.18</p>
-        </a>
-      </article>
-      <article>
-        <a href="">
-          <img src="" alt="">
-          <p>네 번째</p>
-          <p>오늘을 살아내고, 우리 내일로 가자</p>
-          <p>2020.05.19</p>
-        </a>
-      </article> -->
+    <section id="articles" class="articles section">
+      <h2 class="title f-po">Last Articles</h2>
+      <section class="article-wrapper">
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/goods/stamp2.webp" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">열아홉 번째</p>
+              <p class="headline">저희에요! 저희 디핑소스에요!</p>
+              <p class="copy small">2021.01.17</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/logo-letter-col1.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">열여덟 번째</p>
+              <p class="headline">디핑소스 셰프 올림</p>
+              <p class="copy small">2020.11.12</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="https://mail.google.com/mail/u/0/popout?ver=1g3ytthb29lwb&q=deeping&qs=true&qid=A58FC35E-5234-470C-8690-3399BB51A9E6&search=query&silk=C4A55F60-6505-47C6-A16F-892883CEED09&th=%23thread-f%3A1682517791947106035&qt=deep.1.deeping.1.deepings.1.ing.1&cvid=1">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/17.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">열일곱 번째</p>
+              <p class="headline">세탁 맡긴 옷 찾아가세요.</p>
+              <p class="copy small">2020.11.5</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/16.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">열여섯 번째</p>
+              <p class="headline">선글라스 벗으세요.</p>
+              <p class="copy small">2020.10.29</p>
+            </div>
+          </a>
+        </article>
+        <!-- <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/15.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">열다섯 번째</p>
+              <p class="headline">부끄러워요😚</p>
+              <p class="copy small">2020.10.22</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/14.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">열네 번째</p>
+              <p class="headline">자요? 자나보네...</p>
+              <p class="copy small">2020.10.15</p>
+            </div>
+          </a>
+        </article> -->
+
+        <!-- <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/17.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">열세 번째</p>
+              <p class="headline">너무 혼란스러워요!</p>
+              <p class="copy small">2020.10.8</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/17.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">열두 번째</p>
+              <p class="headline">그럴 때도 있는거죠...</p>
+              <p class="copy small">2020.09.24</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/17.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">열한 번째</p>
+              <p class="headline">캔, 눈, 사랑이 모이면?</p>
+              <p class="copy small">2020.09.17</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/17.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">열 번째</p>
+              <p class="headline">나..무시하는 거예요..?</p>
+              <p class="copy small">2020.09.10</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/17.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">아홉 번째</p>
+              <p class="headline">이 시국에 비행이라뇨?</p>
+              <p class="copy small">2020.09.03</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/17.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">여덟 번째</p>
+              <p class="headline">설에 뭐하시나요?</p>
+              <p class="copy small">2020.08.27</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/17.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">일곱 번째</p>
+              <p class="headline">저의 구애를 받아주시겠습니까?</p>
+              <p class="copy small">2020.08.20</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/17.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">여섯 번째</p>
+              <p class="headline">맞는 말만 하는 꼴통이신가요?</p>
+              <p class="copy small">2020.08.13</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/17.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">다섯 번째</p>
+              <p class="headline">우리는 어쨰서 어른이 된 걸까?</p>
+              <p class="copy small">2020.06.18</p>
+            </div>
+          </a>
+        </article>
+        <article class="article">
+          <a class="link" href="">
+            <div class="image-wrapper">
+              <img class="image" src="./images/articles/17.jpg" alt="">
+            </div>
+            <div class="copy-wrapper">
+              <p class="copy small">네 번째</p>
+              <p class="headline">오늘을 살아내고, 우리 내일로 가자</p>
+              <p class="copy small">2020.05.19</p>
+            </div>
+          </a>
+        </article> -->
+      </section>
+      <button class="cta">더보기</button>
     </section>
 
-    <!-- Comment snack -->
-    <section id="comment">
-      <h2>Comment Snack</h2>
-      <ul>
-        <li><button>All</button></li>
-        <li><button>장르 1</button></li>
-        <li><button>장르 2</button></li>
-        <li><button>장르 3</button></li>
-        <li><button>장르 4</button></li>
+    <!-- Goods -->
+    <section id="goods" class="goods section">
+      <h2 class="title f-po">Deeping's Goods</h2>
+      <ul class="categories">
+        <li><button class="cta on" data-category="all">All</button></li>
+        <li><button class="cta" data-category="fork">Posters</button></li>
+        <li><button class="cta" data-category="hiphop">Clothes</button></li>
+        <li><button class="cta" data-category="hiphop">Etc</button></li>
       </ul>
       <!-- Slide -->
-      <div>
-        <h3>김사월</h3>
-        <img src="" alt="">
-        <div>
-          <button>Comments</button>
-          <ul>
-            <li>댓글</li>
-            <li>댓글</li>
-          </ul>
+      <section class="article-wrapper swiper">
+        <div class="swiper-wrapper">
+          <article class="article swiper-slide" data-type="fork">
+            <div class="image-wrapper">
+              <img class="image" src="./images/goods/calendar.webp" alt="LP 우주선이 그려진 달력 포스터">
+            </div>
+            <h3 class="copy strong">2021 calendar</h3>
+            <ul class="copy-wrapper">
+              <li class="copy small">LP 우주선 달력 포스터</li>
+            </ul>
+          </article>
+          <article class="article swiper-slide" data-type="fork">
+            <div class="image-wrapper">
+              <img class="image" src="./images/goods/hoodie.webp" alt="디핑 소스의 후드">
+            </div>
+            <h3 class="copy strong">Deeping's Hoodie</h3>
+            <ul class="copy-wrapper">
+              <li class="copy small">디핑 소스의 후드</li>
+            </ul>
+          </article>
+          <article class="article swiper-slide" data-type="fork">
+            <div class="image-wrapper">
+              <img class="image" src="./images/goods/ufo.webp" alt="LP 행성 외계인에게 납치당하는 캐릭터가 그려진 포스터">
+            </div>
+            <h3 class="copy strong">UFO from 'LP' planet </h3>
+            <ul class="copy-wrapper">
+              <li class="copy small">LP 행성 외계인에게 납치당하는 쏘-쓰</li>
+            </ul>
+          </article>
+          <article class="article swiper-slide" data-type="fork">
+            <div class="image-wrapper">
+              <img class="image" src="./images/goods/rocket.webp" alt="로켓이 그려진 포스터">
+            </div>
+            <h3 class="copy strong">Deeping Rocket</h3>
+            <ul class="copy-wrapper">
+              <li class="copy small">우주까지 보내는 소스의 추진력!</li>
+            </ul>
+          </article>
+          <article class="article swiper-slide" data-type="hiphop">
+            <div class="image-wrapper">
+              <img class="image" src="./images/goods/graffiti.webp" alt="그래피티가 그려진 포스터">
+            </div>
+            <h3 class="copy strong">Deeping's Graffiti</h3>
+            <ul class="copy-wrapper">
+              <li class="copy small">디핑소스만의 그래피티</li>
+            </ul>
+          </article>
+          <article class="article swiper-slide" data-type="hiphop">
+            <div class="image-wrapper">
+              <img class="image" src="./images/goods/ocean.webp" alt="소스 바다가 그려진 포스터">
+            </div>
+            <h3 class="copy strong">The ocean of 'LP' planet</h3>
+            <ul class="copy-wrapper">
+              <li class="copy small">소스 바다에서 LP판으로 물 놀이 하기</li>
+            </ul>
+          </article>
+          <article class="article swiper-slide" data-type="hiphop">
+            <div class="image-wrapper">
+              <img class="image" src="./images/goods/sauce.webp" alt="디핑 소스의 마스코트 쏘쓰가 그려진 포스터">
+            </div>
+            <h3 class="copy strong">ssau-cce</h3>
+            <ul class="copy-wrapper">
+              <li class="copy small">디핑 소스의 마스코트 캐릭터 쏘-쓰</li>
+            </ul>
+          </article>
+          <article class="article swiper-slide" data-type="hiphop">
+            <div class="image-wrapper">
+              <img class="image" src="./images/goods/sticker.webp" alt="스티커 5종">
+            </div>
+            <h3 class="copy strong">Deeping's sticker</h3>
+            <ul class="copy-wrapper">
+              <li class="copy small">디핑 소스의 스티커 5종</li>
+            </ul>
+          </article>
+          <article class="article swiper-slide" data-type="hiphop">
+            <div class="image-wrapper">
+              <img class="image" src="./images/goods/stamp.webp" alt="도장">
+            </div>
+            <h3 class="copy strong">Deeping's stamp</h3>
+            <ul class="copy-wrapper">
+              <li class="copy small">디핑 소스의 자국을 여기저기 꾹 찍어 남겨보자</li>
+            </ul>
+          </article>
         </div>
-      </div>
-      <div>
-        <h3>뱃사공</h3>
-        <img src="" alt="">
-        <div>
-          <button>Comments</button>
-          <ul>
-            <li>댓글</li>
-            <li>댓글</li>
-          </ul>
-        </div>
-      </div>
-      <div>
-        <h3>재달</h3>
-        <img src="" alt="">
-        <div>
-          <button>Comments</button>
-          <ul>
-            <li>댓글</li>
-            <li>댓글</li>
-          </ul>
-        </div>
-      </div>
+      </section>
+      
     </section>
-    
-    <!-- Goods -->
-    <section id="Goods">
-      <!-- Slide -->
-      <div>
-        <a href="">
-          <img src="" alt="">
-        </a>
-      </div>
-      <div>
-        <a href="">
-          <img src="" alt="">
-        </a>
-      </div>
-      <div>
-        <a href="">
-          <img src="" alt="">
-        </a>
-      </div>
-      <div>
-        <a href="">
-          <img src="" alt="">
-        </a>
+
+    <!-- About -->
+    <section id="about" class="about section">
+      <div class="max-width">
+        <h2 class="title f-po">What is Deeping Sauce?</h2>
+        
+        <button class="headline on" data-title="message">
+          전달드리는 메시지
+          <span class="icon"></span>
+        </button>
+        <div class="copy-wrapper" data-content="message">
+          <!-- <p class="copy">
+            저희는 미세한 틈 사이로 드러나는 가치에 민감하게 반응합니다. <br>
+            그리고 발견한 가치에 생명을 불어넣어 세상을 풍요롭게 하는 것을 목표로 합니다.
+          </p> -->
+          <p class="copy">
+            저희는 표현하는 모두가 예술가라고 생각하며 모든 이들이 예술을 향유하며 살아가기 바랍니다.
+          </p>
+        </div>
+
+        <button class="headline on" data-title="plan">
+          기획 의도
+          <span class="icon"></span>
+        </button>
+        <div class="copy-wrapper" data-content="plan">
+          <p class="copy">
+            유튜브 콘텐츠 자주 보시나요? 콘텐츠의 댓글도 자주 보시나요? 
+            언제부터인가 유튜브 이용자들은 단순히 콘텐츠를 보는 것을 넘어서, 다양한 반응을 댓글로 표현하고 서로의 반응에 공감하고 있어요.
+            콘텐츠의 반응들이 모여 콘텐츠를 뛰어넘는 콘텐츠가 되는 거죠. 
+            이런 현상이 가능한 이유는 아마 다른 이들의 생각이 담긴 댓글을 통해 콘텐츠를 더욱 다양한 관점에서 느낄 수 있기 때문일 거예요.
+            여기서, 저희는 미세하게 드러나는 가치를 발견했습니다.
+            바로 '표현과 공유를 통한 예술의 발전' 이에요.
+          </p>
+          <p class="copy">
+            예술은 아티스트가 작품을 냄으로써 완성되는 것이 아니라,
+            다양한 사람들이 예술 작품에 대해 각자의 방식으로 표현하고 공유하며 그것을 재생산할 때,
+            진정으로 예술이 완성되어간다고 생각하게 되었어요.
+            이러한 생각에서 시작된! 첫 번째 프로젝트, 인디음악과 Deeping Sauce!
+            음악 추천과 함께 리스너들의 반응을 모으고, 거기다 저희의 생각을 더해 
+            컨텐츠를 재생산하는 음악 큐레이션 서비스! 
+            Deeping Sause와 함께 음악을 더 깊이 음미하세요!
+          </p>
+        </div>
+
+        <button class="headline on"  data-title="deep">
+          Dipping sauce(찍어 먹는 소스)도 아니고 Deeping sauce(깊은 소스)가 뭐야..?
+          <span class="icon"></span>
+        </button>
+        <div class="copy-wrapper" data-content="deep">
+          <p class="copy">
+            똑같은 음식이라도 다른 소스를 찍어 먹으면 전혀 다른 맛이 나곤 하잖아요. 
+            소스의 그런 특징에서 영감을 얻었습니다. <br>
+            'Dipping Sauce(찍어먹는 소스)’에 ‘깊다(deep)’라는 의미를 더한 Deeping Sauce로서 <br>
+            지금부터 여러분들이 음악과 함께 곁들이기에 가장 좋은 소스가 되겠습니다. 😊
+          </p>
+        </div>
+
+        <button class="headline on" data-title="look">
+          뉴스레터 구성 둘러보기
+          <span class="icon"></span>
+        </button>
+        <div class="copy-wrapper look" data-content="look">
+          <div class="copy">
+            <p class="strong">첫 번째 코스는 "WEEKLY SNACK"</p>
+            <p>먼저 소스를 찍어먹기 위해 맛있는 스낵이 필요하겠죠?</p>
+            <ul class="list-wrapper">
+              <li class="list small">나만 알고싶은 인디음악을 매주 추천해줘요!</li>
+              <li class="list small">바로 들을 수 있게 음원 스트리밍 사이트 링크도 같이 걸어드려요!</li>
+            </ul>
+          </div>
+          <div class="copy">
+            <p class="strong">두 번째 코스는 "ARTIST SAUCE!"</p>
+            <p>
+              인디장르의 특성상 아티스트의 정보를 알기 어려워요! <br>
+              그들의 영상 인터뷰, 잡지 인터뷰 등 다양한 매체를 통해 정보를 수집해, <br>
+              일일이 찾아보기 힘들었던 아티스트의 정보와 음악 기획의도 등을 디핑소스의 컨텐츠 만으로도 한 눈에 알 수 있게 소개 합니다.
+            </p>
+            <ul class="list-wrapper">
+              <li class="list small">아티스트의 가치관</li>
+              <li class="list small">영감을 어디서 얻을까?</li>
+              <li class="list small">음악 작업 방식은 어떨까?</li>
+              <li class="list small">해당 음악이 만들어지게 된 스토리</li>
+              <li class="list small">앨범 커버 디자인에 대한 이야기까지!</li>
+            </ul>
+          </div>
+          <div class="copy">
+            <p class="strong">세 번째 코스는 “DEEPING SAUCE”</p>
+            <p>
+              인디밴드 커뮤니티, 유튜브 댓글에서는 곡에 대한 사람들의 좋은 생각들만 모아보기는 힘들었죠! <br>
+              하지만 Deeping sauce는 다양한 사람들의 좋은 해석과 의견을 한 곳에 모아두었어요! <br>
+              음악 감상에 있어 더 다양하고 깊게 감상할 수 있도록 큐레이션 해줍니다. 저희의 기획의도가 가장 많이 묻어난 코스에요! 
+            </p>
+            <ul class="list-wrapper">
+              <li class="list small">
+                음악을 더 깊게 듣게 도와주는 사람들의 소스(댓글) <span class="small">e.g. 브런치, 카페, 음악 스트리밍 사이트, 유튜브, 인디 커뮤니티</span>
+              </li>
+            </ul>
+          </div>
+          <div class="copy">
+            <p class="strong">네 번째 코스는 “BRING YOUR SAUCE!” 그리고 “DEEPING CHEF's SAUCE”</p>
+            <p>
+              이제는 당신의 소스를 남겨주세요! <br>
+              이 코너에서는 셰프들의 비밀 소스도 볼 수 있어요!
+            </p>
+            <ul class="list-wrapper">
+              <li class="list small">아직 평론이 낯선 대중들을 위해 저희는 해당 음악과 관련된 간단한 질문을 제공해요!</li>
+              <li class="list small">인스타 DM 또는 이메일로 여러분의 소스를 보내주세요!</li>
+              <li class="list small">마지막으로 같이 보면 좋을 디저트 영상을 추천해줘요!</li>
+              <li class="list small">Deeping sauce의 제작자인 셰프의 생각을 남겨두었어요!</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- Contact -->
-  <footer id="contact">
-    <ul>
-      <li>
-        <a href="page.stibee.com/subscriptions/64008">구독하기</a>
-      </li>
-      <li>
-        Email
-        <a href="ndeepkorea@gmail.com"></a>
-      </li>
-      <li>
-        Instagram
-        <a href="https://www.instagram.com/deeping_sauce/?hl=ko">deeping_sauce</a>
-      </li>
-    </ul>
-    <a href="">구독하기</a>
-    <a href=""></a>
+  <footer id="contact" class="contact section">
+    <h2 class="title">Deeping Sauce</h2>
+    <div class="content-wrapper">
+      <h3 class="headline">About us</h3>
+      <ul class="list-wrapper">
+        <li class="list">
+          NewsLetter
+          <a class="cta" href="page.stibee.com/subscriptions/64008">구독하기</a>
+        </li>
+      </ul>
+    </div>
+    <div class="content-wrapper">
+      <h3 class="headline">SNS</h3>
+      <ul class="list-wrapper">
+        <li class="list">
+          Email
+          <a class="cta" href="ndeepkorea@gmail.com">ndeepkorea@gmail.com</a>
+        </li>
+        <li class="list">
+          Instagram
+          <a class="cta" href="https://www.instagram.com/deeping_sauce/?hl=ko">deeping_sauce</a>
+        </li>
+      </ul>
+    </div>
   </footer>
   
   <!-- Go to top -->
-  <button></button>
+  <button class="gotop" aria-label="상단으로 이동"></button>
 </body>
 </html>
