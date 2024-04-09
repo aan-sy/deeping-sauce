@@ -1,3 +1,5 @@
+'use strict';
+
 const header = document.querySelector('.header');
 let headerHeight = header.getBoundingClientRect().height;
 const homeSection = document.querySelector('.home');
