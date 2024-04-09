@@ -1,9 +1,13 @@
 const header = document.querySelector('.header');
-const headerHeight = header.getBoundingClientRect().height;
+let headerHeight = header.getBoundingClientRect().height;
 const homeSection = document.querySelector('.home');
 const homeHeight = homeSection.getBoundingClientRect().height;
 const toggleBtn = document.querySelector('.toggle-menu');
 const menu = document.querySelector('header .menu');
+
+window.addEventListener('resize', _.debounce(() => {
+  headerHeight = header.getBoundingClientRect().height;
+}, 1000))
 
 let prevY = 0;
 let currentY = 0;
